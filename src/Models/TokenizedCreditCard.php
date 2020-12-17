@@ -148,6 +148,10 @@ class TokenizedCreditCard
             throw new InvalidArgumentException("You must supply a credit card token.");
         }
 
+        if (!array_key_exists("card_type", $values)) {
+            throw new InvalidArgumentException("You must supply a card type.");
+        }
+
         if (!array_key_exists("identifier", $values)) {
             throw new InvalidArgumentException("You must supply a credit card identifier.");
         }
